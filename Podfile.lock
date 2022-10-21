@@ -1,24 +1,30 @@
 PODS:
-  - irtc-sdk-pod (4.4.1):
-    - irtc-sdk-pod/IRTC (= 4.4.1)
-  - irtc-sdk-pod/IRTC (4.4.1)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
 
 DEPENDENCIES:
-  - "irtc-sdk-pod (from `git@bitbucket.org:zealcomm/irtc-sdk-pod.git`, tag `4.4.1`)"
+  - AFNetworking
 
-EXTERNAL SOURCES:
-  irtc-sdk-pod:
-    :git: "git@bitbucket.org:zealcomm/irtc-sdk-pod.git"
-    :tag: 4.4.1
-
-CHECKOUT OPTIONS:
-  irtc-sdk-pod:
-    :git: "git@bitbucket.org:zealcomm/irtc-sdk-pod.git"
-    :tag: 4.4.1
+SPEC REPOS:
+  trunk:
+    - AFNetworking
 
 SPEC CHECKSUMS:
-  irtc-sdk-pod: 0362062a05c3ecf228d497761fdd8bfdbbac3267
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
 
-PODFILE CHECKSUM: 54782141a22a9f452042f174a9b1fa4622405040
+PODFILE CHECKSUM: bc2489c05cbed74fd81c695a1c23df94149d21ec
 
 COCOAPODS: 1.11.3

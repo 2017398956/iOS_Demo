@@ -8,8 +8,11 @@
 #import "SecondViewController.h"
 #import "NSString+Helper.h"
 #import "UIColor+Helper.h"
+#import <AppBase/AppBase.h>
+//#import <AF
 @interface SecondViewController (){
     NSInteger age;
+    Test *test;
 }
 @property(nonatomic,copy)NSString *name;
 @end
@@ -18,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%s",[[NSString stringWithFormat:@"%@,%@",@"1",@"2"] UTF8String]);
     // Do any additional setup after loading the view from its nib.
 //    NSString *test = @"test";
 //    [test testNSString02];
