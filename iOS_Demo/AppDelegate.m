@@ -29,6 +29,13 @@
             [self.window makeKeyAndVisible];
         }
     }
+    MyLog(@"%f,%f",Device_Width,Device_Height);
+    
+    GenericsTest *genericsTest = [GenericsTest new];
+    [genericsTest printGenericsType];
+    
+    GenericsTest<DrawView *> *genericsTest2 = [GenericsTest new];
+    [genericsTest2 printGenericsType];
     return YES;
 }
 

@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
-#import "NSString+Util.h"
 @interface ViewController ()
 
 @end
@@ -27,11 +26,15 @@
     [testBtn titleLabel].text = @"test";
     [testBtn addTarget:self action:@selector(goNextView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:testBtn];
+    
+    DrawView *drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 400, 400, 400)];
+    drawView.backgroundColor = [UIColor lightGrayColor];
+    [drawView clearImage];
+    [drawView testExtension];
+//    [drawView setNeedsDisplay];
+    [self.view addSubview:drawView];
     // Do any additional setup after loading the view.
     NSLog(@"%@-----------%@",self.view.window, self.navigationController);
-    NSString *temp;
-//    temp = @"test";
-    NSLog(@"temp is empty ? %@",@([temp isEmpty]));
 }
 
 

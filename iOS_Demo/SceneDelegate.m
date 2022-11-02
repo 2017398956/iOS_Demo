@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "BaseUINavigationController.h"
+#import <AppBase/AppBase.h>
 
 @interface SceneDelegate ()
 
@@ -17,10 +18,14 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    NSString *test;
+//    test = @"1";
+    NSLog(@"test isNotEmpty? %d",[test isNotEmpty]);
     NSLog(@"开始设置 window");
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
     if ([scene isKindOfClass:[UIWindowScene class]]) {
         if(!self.window){
             // 正常情况下 self.window 不为 null

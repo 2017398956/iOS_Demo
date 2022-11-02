@@ -1,0 +1,90 @@
+//
+//  PrefixHeader.pch
+//  AppBase
+//
+//  Created by nfl on 2022/10/21.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define US_KEY_TOKEN @"nfl_token" // 用于存储会话 token
+
+// 单例模式宏定义
+#define declareSingleInstance(name) +(instancetype)shared##name
+#define relizeSingleInstanceWithBlock(name , block) \
+static id _instance;\
++ (instancetype)allocWithZone:(struct _NSZone *)zone{\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken\
+                  , ^{\
+        _instance = [super allocWithZone:zone];\
+    });\
+    return _instance;\
+}\
+\
+- (instancetype)init{\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken\
+                  , ^{\
+        _instance = [super init];\
+        block();\
+    });\
+    return _instance;\
+}\
++ (instancetype)shared##name{\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken, ^{\
+        _instance = [[self alloc] init];\
+    });\
+    return _instance;\
+}
+#define relizeSingleInstance(name) relizeSingleInstanceWithBlock(name, ^{})
+
+// 解决 log 打印不全的问题
+#define CLog(format, ...)  NSLog(format, ## __VA_ARGS__)
+//#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#ifdef DEBUG
+#define __MY_TIME__ ({\
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];[dateFormatter setDateStyle:NSDateFormatterMediumStyle];[dateFormatter setTimeStyle:NSDateFormatterShortStyle];[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
+    [dateFormatter stringFromDate:[NSDate date]];\
+})
+#define MyLog(fmt,...) printf("%s\n", [[NSString stringWithFormat:(@"------------------------%@------------------------\r\t[文件名称:%s]\r\t[函数名:%s]\r\t[行号:%d]\r\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__] UTF8String]);
+#else
+#include <TargetConditionals.h>
+#if TARGET_IPHONE_SIMULATOR
+#define __MY_TIME__ ({\
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
+    [dateFormatter stringFromDate:[NSDate date]];\
+})
+#define MyLog(fmt, ...)   NSLog(@"%@", [NSString stringWithFormat:(@"------------------------%@------------------------\r\n\t[文件名称:%s]\r\n\t[函数名:%s]\r\n\t[行号:%d]\r\n\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__]);
+#else
+#define MyLog(...)
+#endif
+#endif
+
+// 调用这个方法的类要先 #import <objc/runtime.h>
+#define excOriginMethod() NSLog(@"method name: %@", NSStringFromSelector(_cmd)); \
+unsigned int methodCount; \
+Method *methodList = class_copyMethodList([self class], &methodCount); \
+for (int i = methodCount - 1; i > 0; i--) {\
+    Method method = methodList[i];\
+    SEL sel = method_getName(method);\
+    IMP imp = method_getImplementation(method);\
+    NSLog(@"方法名称： %@", [NSString stringWithUTF8String:sel_getName(sel)]);\
+    if (sel == _cmd) {\
+        void (*fundtion)(id, SEL) = (void *)imp;\
+        fundtion(self, sel);\
+        break;\
+    }\
+}\
+free(methodList);
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+

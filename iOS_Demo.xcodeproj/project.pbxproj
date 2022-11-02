@@ -15,14 +15,11 @@
 		81251BC328F7F9A300944E82 /* SecondViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 81251BC028F7F9A300944E82 /* SecondViewController.h */; };
 		81251BC428F7F9A300944E82 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81251BC128F7F9A300944E82 /* SecondViewController.m */; };
 		81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81251BC228F7F9A300944E82 /* SecondViewController.xib */; };
-		81562B852900F1C10025CEDB /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81562B842900F1C10025CEDB /* AppBase.framework */; };
-		81562B862900F1C10025CEDB /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81562B842900F1C10025CEDB /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		81562B8B2900F4EC0025CEDB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81562B882900F4740025CEDB /* AFNetworking.framework */; };
+		817FD4BC290661D20020C8FB /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817FD4BB290661D20020C8FB /* AppBase.framework */; };
+		817FD4BD290661D20020C8FB /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 817FD4BB290661D20020C8FB /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A0C4A528F945E200C469D6 /* NSString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A428F945E200C469D6 /* NSString+Helper.h */; };
 		81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */; };
 		81A0C4AA28F946AF00C469D6 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */; };
-		81A0C4AD28F9494100C469D6 /* NSString+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4AB28F9494100C469D6 /* NSString+Util.h */; };
-		81A0C4AE28F9494100C469D6 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0C4AC28F9494100C469D6 /* NSString+Util.m */; };
 		81C4AE7028F561750031C7D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE6F28F561750031C7D2 /* AppDelegate.m */; };
 		81C4AE7328F561750031C7D2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE7228F561750031C7D2 /* SceneDelegate.m */; };
 		81C4AE7628F561750031C7D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE7528F561750031C7D2 /* ViewController.m */; };
@@ -33,7 +30,9 @@
 		81C4AE8B28F561770031C7D2 /* iOS_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE8A28F561770031C7D2 /* iOS_DemoTests.m */; };
 		81C4AE9528F561770031C7D2 /* iOS_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE9428F561770031C7D2 /* iOS_DemoUITests.m */; };
 		81C4AE9728F561770031C7D2 /* iOS_DemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C4AE9628F561770031C7D2 /* iOS_DemoUITestsLaunchTests.m */; };
+		81F031D729063E9900407DC8 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 81F031D629063E9900407DC8 /* PrefixHeader.pch */; };
 		A178F5B2F2C81B873C7F9F82 /* Pods_iOS_Demo_iOS_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0071BA049E169DC65430C38D /* Pods_iOS_Demo_iOS_DemoUITests.framework */; };
+		E40CF8DED26996500899783C /* Pods_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D875B890F57065BC2561DB2 /* Pods_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		81562B872900F1C10025CEDB /* Embed Frameworks */ = {
+		817FD4BA290661B20020C8FB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				81562B862900F1C10025CEDB /* AppBase.framework in Embed Frameworks */,
+				817FD4BD290661D20020C8FB /* AppBase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,20 +80,10 @@
 		81251BC028F7F9A300944E82 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		81251BC128F7F9A300944E82 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		81251BC228F7F9A300944E82 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		81562B552900E7340025CEDB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B582900E8430025CEDB /* irtc_sdk_pod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = irtc_sdk_pod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B612900E90D0025CEDB /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B712900ECB10025CEDB /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B782900F0740025CEDB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B7C2900F0ED0025CEDB /* Pods_AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B802900F1190025CEDB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B842900F1C10025CEDB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81562B882900F4740025CEDB /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		817FD4BB290661D20020C8FB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A0C4A428F945E200C469D6 /* NSString+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
-		81A0C4AB28F9494100C469D6 /* NSString+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
-		81A0C4AC28F9494100C469D6 /* NSString+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
 		81C4AE6B28F561750031C7D2 /* iOS_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C4AE6E28F561750031C7D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81C4AE6F28F561750031C7D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +101,7 @@
 		81C4AE9028F561770031C7D2 /* iOS_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C4AE9428F561770031C7D2 /* iOS_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_DemoUITests.m; sourceTree = "<group>"; };
 		81C4AE9628F561770031C7D2 /* iOS_DemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_DemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		81F031D629063E9900407DC8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		ACB11240CCFE8E0B103D40A6 /* Pods-iOS_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Demo.release.xcconfig"; path = "Target Support Files/Pods-iOS_Demo/Pods-iOS_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B2CCC5C6889EEF13AC170346 /* Pods-iOS_DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS_DemoTests/Pods-iOS_DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C81E6D56B09C085ACC88BA51 /* Pods-iOS_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_DemoTests.release.xcconfig"; path = "Target Support Files/Pods-iOS_DemoTests/Pods-iOS_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,8 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81562B852900F1C10025CEDB /* AppBase.framework in Frameworks */,
-				81562B8B2900F4EC0025CEDB /* AFNetworking.framework in Frameworks */,
+				E40CF8DED26996500899783C /* Pods_iOS_Demo.framework in Frameworks */,
+				817FD4BC290661D20020C8FB /* AppBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +159,6 @@
 				81A0C4A428F945E200C469D6 /* NSString+Helper.h */,
 				81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */,
 				81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */,
-				81A0C4AB28F9494100C469D6 /* NSString+Util.h */,
-				81A0C4AC28F9494100C469D6 /* NSString+Util.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -207,6 +195,7 @@
 		81C4AE6D28F561750031C7D2 /* iOS_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				81F031D629063E9900407DC8 /* PrefixHeader.pch */,
 				81A0C4A628F9463800C469D6 /* test */,
 				81C4AE6E28F561750031C7D2 /* AppDelegate.h */,
 				81C4AE6F28F561750031C7D2 /* AppDelegate.m */,
@@ -247,15 +236,7 @@
 		F0AF142C3C0427B0C32B49B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81562B882900F4740025CEDB /* AFNetworking.framework */,
-				81562B842900F1C10025CEDB /* AppBase.framework */,
-				81562B802900F1190025CEDB /* AppBase.framework */,
-				81562B7C2900F0ED0025CEDB /* Pods_AppBase.framework */,
-				81562B782900F0740025CEDB /* AppBase.framework */,
-				81562B712900ECB10025CEDB /* AFNetworking.framework */,
-				81562B612900E90D0025CEDB /* AFNetworking.framework */,
-				81562B582900E8430025CEDB /* irtc_sdk_pod.framework */,
-				81562B552900E7340025CEDB /* AppBase.framework */,
+				817FD4BB290661D20020C8FB /* AppBase.framework */,
 				2D875B890F57065BC2561DB2 /* Pods_iOS_Demo.framework */,
 				0071BA049E169DC65430C38D /* Pods_iOS_Demo_iOS_DemoUITests.framework */,
 				08C03C9AA7491CCE7A47B36F /* Pods_iOS_DemoTests.framework */,
@@ -274,7 +255,7 @@
 				81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */,
 				81251BBE28F7F6A900944E82 /* UIViewController+Helper.h in Headers */,
 				81A0C4A528F945E200C469D6 /* NSString+Helper.h in Headers */,
-				81A0C4AD28F9494100C469D6 /* NSString+Util.h in Headers */,
+				81F031D729063E9900407DC8 /* PrefixHeader.pch in Headers */,
 				81251BC328F7F9A300944E82 /* SecondViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +273,8 @@
 				81C4AE6828F561750031C7D2 /* Frameworks */,
 				81C4AE6928F561750031C7D2 /* Resources */,
 				8132171E28F5716D0055E4B5 /* ShellScript */,
-				81562B872900F1C10025CEDB /* Embed Frameworks */,
 				12864BFDAA8A7D67D4BCC165 /* [CP] Embed Pods Frameworks */,
+				817FD4BA290661B20020C8FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,7 +523,6 @@
 				81C4AE7028F561750031C7D2 /* AppDelegate.m in Sources */,
 				81251BBF28F7F6A900944E82 /* UIViewController+Helper.m in Sources */,
 				81A0C4AA28F946AF00C469D6 /* UIColor+Helper.m in Sources */,
-				81A0C4AE28F9494100C469D6 /* NSString+Util.m in Sources */,
 				81251BC428F7F9A300944E82 /* SecondViewController.m in Sources */,
 				81251BBA28F7F3D700944E82 /* BaseUINavigationController.m in Sources */,
 				81C4AE8128F561770031C7D2 /* main.m in Sources */,
@@ -729,6 +709,8 @@
 					"$(TARGET_BUILD_DIR)",
 					"\"${PODS_ROOT)/AFNetworking\"",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -770,6 +752,8 @@
 					"$(TARGET_BUILD_DIR)",
 					"\"${PODS_ROOT)/AFNetworking\"",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

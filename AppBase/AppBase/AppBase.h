@@ -6,7 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Test.h"
+#import <AppBase/Test.h>
+#import <AppBase/TestTwo.h>
+#import <AppBase/TestThree.h>
+#import <AppBase/NSString+Util.h>
+#import <AppBase/DrawView.h>
+#import <AppBase/DrawView+DrawHelper.h>
+#import <AppBase/DrawView+Ext.h>
+#import <AppBase/GenericsTest.h>
 //! Project version number for AppBase.
 FOUNDATION_EXPORT double AppBaseVersionNumber;
 

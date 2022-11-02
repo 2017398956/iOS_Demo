@@ -9,4 +9,10 @@
 
 @implementation Test
 
+relizeSingleInstance();
+
+- (void)test:(NSString *_Nullable)str{
+    MyLog(@"Test");
+}
+
 @end
