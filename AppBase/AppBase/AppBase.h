@@ -14,6 +14,8 @@
 #import <AppBase/DrawView+DrawHelper.h>
 #import <AppBase/DrawView+Ext.h>
 #import <AppBase/GenericsTest.h>
+#import <AppBase/NSDate+Helper.h>
+#import <AppBase/NSObject+Helper.h>
 //! Project version number for AppBase.
 FOUNDATION_EXPORT double AppBaseVersionNumber;
 

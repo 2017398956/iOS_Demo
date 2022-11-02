@@ -44,6 +44,10 @@
 		817523C329123CA200CDF49A /* DrawView+Ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 817523C229123CA200CDF49A /* DrawView+Ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		817523C62912436A00CDF49A /* GenericsTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 817523C42912436A00CDF49A /* GenericsTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		817523C72912436A00CDF49A /* GenericsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 817523C52912436A00CDF49A /* GenericsTest.m */; };
+		817523CC29124D0F00CDF49A /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 817523C829124D0F00CDF49A /* NSDate+Helper.m */; };
+		817523CD29124D0F00CDF49A /* NSObject+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 817523C929124D0F00CDF49A /* NSObject+Helper.m */; };
+		817523CE29124D0F00CDF49A /* NSDate+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 817523CA29124D0F00CDF49A /* NSDate+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		817523CF29124D0F00CDF49A /* NSObject+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 817523CB29124D0F00CDF49A /* NSObject+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		817FD4C029066A410020C8FB /* SigletonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 817FD4BE29066A410020C8FB /* SigletonBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		817FD4C129066A410020C8FB /* SigletonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FD4BF29066A410020C8FB /* SigletonBase.m */; };
 		817FD4C429066B440020C8FB /* TestThree.h in Headers */ = {isa = PBXBuildFile; fileRef = 817FD4C229066B440020C8FB /* TestThree.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +90,10 @@
 		817523C229123CA200CDF49A /* DrawView+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawView+Ext.h"; sourceTree = "<group>"; };
 		817523C42912436A00CDF49A /* GenericsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericsTest.h; sourceTree = "<group>"; };
 		817523C52912436A00CDF49A /* GenericsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericsTest.m; sourceTree = "<group>"; };
+		817523C829124D0F00CDF49A /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		817523C929124D0F00CDF49A /* NSObject+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Helper.m"; sourceTree = "<group>"; };
+		817523CA29124D0F00CDF49A /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		817523CB29124D0F00CDF49A /* NSObject+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Helper.h"; sourceTree = "<group>"; };
 		817FD4BE29066A410020C8FB /* SigletonBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SigletonBase.h; sourceTree = "<group>"; };
 		817FD4BF29066A410020C8FB /* SigletonBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigletonBase.m; sourceTree = "<group>"; };
 		817FD4C229066B440020C8FB /* TestThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
@@ -142,6 +150,10 @@
 		816C95BD290F682800117BD8 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				817523CA29124D0F00CDF49A /* NSDate+Helper.h */,
+				817523C829124D0F00CDF49A /* NSDate+Helper.m */,
+				817523CB29124D0F00CDF49A /* NSObject+Helper.h */,
+				817523C929124D0F00CDF49A /* NSObject+Helper.m */,
 				816C95BE290F684400117BD8 /* NSString+Util.h */,
 				816C95BF290F684400117BD8 /* NSString+Util.m */,
 				817523BE29123A7800CDF49A /* DrawView+DrawHelper.h */,
@@ -239,7 +251,9 @@
 				817523B8291214B700CDF49A /* DrawView.h in Headers */,
 				81B79ACA28FE85A9004B13A0 /* AppBase.h in Headers */,
 				817523C029123A7800CDF49A /* DrawView+DrawHelper.h in Headers */,
+				817523CE29124D0F00CDF49A /* NSDate+Helper.h in Headers */,
 				817523C329123CA200CDF49A /* DrawView+Ext.h in Headers */,
+				817523CF29124D0F00CDF49A /* NSObject+Helper.h in Headers */,
 				817523C62912436A00CDF49A /* GenericsTest.h in Headers */,
 				81DD5AB829028353004A1736 /* PrefixHeader.pch in Headers */,
 			);
@@ -419,9 +433,11 @@
 				817523C129123A7800CDF49A /* DrawView+DrawHelper.m in Sources */,
 				81F031D529063D7F00407DC8 /* TestTwo.m in Sources */,
 				817FD4C129066A410020C8FB /* SigletonBase.m in Sources */,
+				817523CC29124D0F00CDF49A /* NSDate+Helper.m in Sources */,
 				817523B9291214B700CDF49A /* DrawView.m in Sources */,
 				81B79ABE28FE85A9004B13A0 /* AppBase.docc in Sources */,
 				81562B682900E9660025CEDB /* Test.m in Sources */,
+				817523CD29124D0F00CDF49A /* NSObject+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
