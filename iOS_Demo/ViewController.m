@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+//#import <IvcsClientSdk/IvcsClientSdk.h>
 @interface ViewController ()
 
 @end
@@ -35,6 +36,8 @@
     [self.view addSubview:drawView];
     // Do any additional setup after loading the view.
     NSLog(@"%@-----------%@",self.view.window, self.navigationController);
+    
+//    IRTCMTLVideoView *videoView;
 }
 
 

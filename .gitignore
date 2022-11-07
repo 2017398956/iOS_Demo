@@ -70,3 +70,7 @@ iOSInjectionProject/
 Pods/
 
 AppBase/doc/
+
+Carthage/
+
+libs/

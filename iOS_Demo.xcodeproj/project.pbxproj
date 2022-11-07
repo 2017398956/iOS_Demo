@@ -15,8 +15,9 @@
 		81251BC328F7F9A300944E82 /* SecondViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 81251BC028F7F9A300944E82 /* SecondViewController.h */; };
 		81251BC428F7F9A300944E82 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81251BC128F7F9A300944E82 /* SecondViewController.m */; };
 		81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81251BC228F7F9A300944E82 /* SecondViewController.xib */; };
-		817FD4BC290661D20020C8FB /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817FD4BB290661D20020C8FB /* AppBase.framework */; };
-		817FD4BD290661D20020C8FB /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 817FD4BB290661D20020C8FB /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		812BE2EB2919058B004495FC /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; };
+		812BE2EC2919058B004495FC /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		819C80E82918D835002DA707 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 819C80E72918D835002DA707 /* Cartfile */; };
 		81A0C4A528F945E200C469D6 /* NSString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A428F945E200C469D6 /* NSString+Helper.h */; };
 		81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */; };
 		81A0C4AA28F946AF00C469D6 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */; };
@@ -59,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				817FD4BD290661D20020C8FB /* AppBase.framework in Embed Frameworks */,
+				812BE2EC2919058B004495FC /* AppBase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +81,8 @@
 		81251BC028F7F9A300944E82 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		81251BC128F7F9A300944E82 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		81251BC228F7F9A300944E82 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		817FD4BB290661D20020C8FB /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		812BE2EA2919058B004495FC /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		819C80E72918D835002DA707 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		81A0C4A428F945E200C469D6 /* NSString+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40CF8DED26996500899783C /* Pods_iOS_Demo.framework in Frameworks */,
-				817FD4BC290661D20020C8FB /* AppBase.framework in Frameworks */,
+				812BE2EB2919058B004495FC /* AppBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,7 @@
 		81C4AE6228F561750031C7D2 = {
 			isa = PBXGroup;
 			children = (
+				819C80E72918D835002DA707 /* Cartfile */,
 				81C4AE6D28F561750031C7D2 /* iOS_Demo */,
 				81C4AE8928F561770031C7D2 /* iOS_DemoTests */,
 				81C4AE9328F561770031C7D2 /* iOS_DemoUITests */,
@@ -236,7 +239,7 @@
 		F0AF142C3C0427B0C32B49B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				817FD4BB290661D20020C8FB /* AppBase.framework */,
+				812BE2EA2919058B004495FC /* AppBase.framework */,
 				2D875B890F57065BC2561DB2 /* Pods_iOS_Demo.framework */,
 				0071BA049E169DC65430C38D /* Pods_iOS_Demo_iOS_DemoUITests.framework */,
 				08C03C9AA7491CCE7A47B36F /* Pods_iOS_DemoTests.framework */,
@@ -371,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819C80E82918D835002DA707 /* Cartfile in Resources */,
 				81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */,
 				81C4AE7E28F561770031C7D2 /* LaunchScreen.storyboard in Resources */,
 				81C4AE7B28F561770031C7D2 /* Assets.xcassets in Resources */,
@@ -704,14 +708,22 @@
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}\"",
+					"${PODS_CONFIGURATION_BUILD_DIR}",
 					"$(TARGET_BUILD_DIR)",
-					"\"${PODS_ROOT)/AFNetworking\"",
+					"${PODS_ROOT}/AFNetworking",
+					"$(SRCROOT)/libs",
+					"$(PROJECT_DIR)/libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Socket.IO-Client-Swift/SocketIO.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream/Starscream.framework/Headers\"",
+					"${PROJECT_DIR}/libs/IvcsClientSdk.framework/Headers",
+				);
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -745,16 +757,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 778BAP6N4Q;
 				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}\"",
+					"${PODS_CONFIGURATION_BUILD_DIR}",
 					"$(TARGET_BUILD_DIR)",
-					"\"${PODS_ROOT)/AFNetworking\"",
+					"${PODS_ROOT}/AFNetworking",
+					"$(SRCROOT)/libs",
+					"$(PROJECT_DIR)/libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Socket.IO-Client-Swift/SocketIO.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream/Starscream.framework/Headers\"",
+					"${PROJECT_DIR}/libs/IvcsClientSdk.framework/Headers",
+				);
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
