@@ -36,6 +36,10 @@
     
     GenericsTest<DrawView *> *genericsTest2 = [GenericsTest new];
     [genericsTest2 printGenericsType];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    UIView *view = imageView;
+    MyLog(@"强转后的类型：%@",[view class]);
     return YES;
 }
 

@@ -18,7 +18,7 @@ end
 target 'iOS_Demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
+  pod 'QMUIKit'
   pod 'AFNetworking/NSURLSession', '3.2.1'
   pod 'AFNetworking/Reachability', '3.2.1'
   pod 'AFNetworking/Security', '3.2.1'

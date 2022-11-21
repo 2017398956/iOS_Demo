@@ -17,6 +17,8 @@
 		81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81251BC228F7F9A300944E82 /* SecondViewController.xib */; };
 		812BE2EB2919058B004495FC /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; };
 		812BE2EC2919058B004495FC /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		818FC160292600D8009FBF66 /* dialog_test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818FC15F292600D8009FBF66 /* dialog_test.storyboard */; };
+		818FC16229260231009FBF66 /* dialog_custom_view_test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818FC16129260231009FBF66 /* dialog_custom_view_test.xib */; };
 		819C80E82918D835002DA707 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 819C80E72918D835002DA707 /* Cartfile */; };
 		81A0C4A528F945E200C469D6 /* NSString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A428F945E200C469D6 /* NSString+Helper.h */; };
 		81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */; };
@@ -82,6 +84,8 @@
 		81251BC128F7F9A300944E82 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		81251BC228F7F9A300944E82 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		812BE2EA2919058B004495FC /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		818FC15F292600D8009FBF66 /* dialog_test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dialog_test.storyboard; sourceTree = "<group>"; };
+		818FC16129260231009FBF66 /* dialog_custom_view_test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dialog_custom_view_test.xib; sourceTree = "<group>"; };
 		819C80E72918D835002DA707 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		81A0C4A428F945E200C469D6 /* NSString+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		81A0C4A728F946AF00C469D6 /* UIColor+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		818FC15E292600A2009FBF66 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				818FC15F292600D8009FBF66 /* dialog_test.storyboard */,
+				818FC16129260231009FBF66 /* dialog_custom_view_test.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		81A0C4A628F9463800C469D6 /* test */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,7 @@
 		81C4AE6D28F561750031C7D2 /* iOS_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				818FC15E292600A2009FBF66 /* view */,
 				81F031D629063E9900407DC8 /* PrefixHeader.pch */,
 				81A0C4A628F9463800C469D6 /* test */,
 				81C4AE6E28F561750031C7D2 /* AppDelegate.h */,
@@ -374,6 +388,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818FC160292600D8009FBF66 /* dialog_test.storyboard in Resources */,
+				818FC16229260231009FBF66 /* dialog_custom_view_test.xib in Resources */,
 				819C80E82918D835002DA707 /* Cartfile in Resources */,
 				81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */,
 				81C4AE7E28F561770031C7D2 /* LaunchScreen.storyboard in Resources */,

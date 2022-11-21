@@ -16,6 +16,7 @@
 #import <AppBase/GenericsTest.h>
 #import <AppBase/NSDate+Helper.h>
 #import <AppBase/NSObject+Helper.h>
+#import <AppBase/KeyboardUtil.h>
 //! Project version number for AppBase.
 FOUNDATION_EXPORT double AppBaseVersionNumber;
 

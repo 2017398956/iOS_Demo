@@ -32,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8115BBCF292791A0000C0053 /* KeyboardUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8115BBCD292791A0000C0053 /* KeyboardUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8115BBD0292791A0000C0053 /* KeyboardUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115BBCE292791A0000C0053 /* KeyboardUtil.m */; };
 		81562B672900E9660025CEDB /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 81562B652900E9660025CEDB /* Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81562B682900E9660025CEDB /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 81562B662900E9660025CEDB /* Test.m */; };
 		816C95C0290F684400117BD8 /* NSString+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 816C95BE290F684400117BD8 /* NSString+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +61,7 @@
 		81DD5AB829028353004A1736 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 81DD5AB729028353004A1736 /* PrefixHeader.pch */; settings = {ATTRIBUTES = (Public, ); }; };
 		81F031D429063D7F00407DC8 /* TestTwo.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F031D229063D7F00407DC8 /* TestTwo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81F031D529063D7F00407DC8 /* TestTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F031D329063D7F00407DC8 /* TestTwo.m */; };
+		8904293FA9275C8B0648DA58 /* Pods_AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8E81B45F6D9F0DD2E70BEB /* Pods_AppBase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F8E81B45F6D9F0DD2E70BEB /* Pods_AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C828B5A91D35C4B73037C9F /* Pods-AppBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBase.debug.xcconfig"; path = "Target Support Files/Pods-AppBase/Pods-AppBase.debug.xcconfig"; sourceTree = "<group>"; };
 		406DEDEBBE691796D57833A7 /* Pods-AppBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBase.release.xcconfig"; path = "Target Support Files/Pods-AppBase/Pods-AppBase.release.xcconfig"; sourceTree = "<group>"; };
+		8115BBCD292791A0000C0053 /* KeyboardUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardUtil.h; sourceTree = "<group>"; };
+		8115BBCE292791A0000C0053 /* KeyboardUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardUtil.m; sourceTree = "<group>"; };
 		81562B652900E9660025CEDB /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		81562B662900E9660025CEDB /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		816C95BE290F684400117BD8 /* NSString+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8904293FA9275C8B0648DA58 /* Pods_AppBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +159,8 @@
 				817523BE29123A7800CDF49A /* DrawView+DrawHelper.h */,
 				817523BF29123A7800CDF49A /* DrawView+DrawHelper.m */,
 				817523C229123CA200CDF49A /* DrawView+Ext.h */,
+				8115BBCD292791A0000C0053 /* KeyboardUtil.h */,
+				8115BBCE292791A0000C0053 /* KeyboardUtil.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -220,6 +229,7 @@
 		D49FDD4ABEE760C1D9D399DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F8E81B45F6D9F0DD2E70BEB /* Pods_AppBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 				817523CE29124D0F00CDF49A /* NSDate+Helper.h in Headers */,
 				817523C329123CA200CDF49A /* DrawView+Ext.h in Headers */,
 				817523CF29124D0F00CDF49A /* NSObject+Helper.h in Headers */,
+				8115BBCF292791A0000C0053 /* KeyboardUtil.h in Headers */,
 				817523C62912436A00CDF49A /* GenericsTest.h in Headers */,
 				81DD5AB829028353004A1736 /* PrefixHeader.pch in Headers */,
 			);
@@ -415,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8115BBD0292791A0000C0053 /* KeyboardUtil.m in Sources */,
 				817523C72912436A00CDF49A /* GenericsTest.m in Sources */,
 				817FD4C529066B440020C8FB /* TestThree.m in Sources */,
 				816C95C1290F684400117BD8 /* NSString+Util.m in Sources */,

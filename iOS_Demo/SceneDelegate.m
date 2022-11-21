@@ -21,6 +21,7 @@
     NSString *test;
 //    test = @"1";
     NSLog(@"test isNotEmpty? %d",[test isNotEmpty]);
+    NSLog(@"test isEmpty? %d",![test isNotEmpty]);
     NSLog(@"开始设置 window");
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
