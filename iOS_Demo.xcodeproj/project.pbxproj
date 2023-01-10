@@ -84,6 +84,7 @@
 		81251BC128F7F9A300944E82 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		81251BC228F7F9A300944E82 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		812BE2EA2919058B004495FC /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		813DD642296D46C400DAAEC2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Build/Alamofire.xcframework/ios-arm64_x86_64-simulator/Alamofire.framework"; sourceTree = "<group>"; };
 		818FC15F292600D8009FBF66 /* dialog_test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dialog_test.storyboard; sourceTree = "<group>"; };
 		818FC16129260231009FBF66 /* dialog_custom_view_test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dialog_custom_view_test.xib; sourceTree = "<group>"; };
 		819C80E72918D835002DA707 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 		F0AF142C3C0427B0C32B49B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				813DD642296D46C400DAAEC2 /* Alamofire.framework */,
 				812BE2EA2919058B004495FC /* AppBase.framework */,
 				2D875B890F57065BC2561DB2 /* Pods_iOS_Demo.framework */,
 				0071BA049E169DC65430C38D /* Pods_iOS_Demo_iOS_DemoUITests.framework */,
@@ -292,6 +294,7 @@
 				8132171E28F5716D0055E4B5 /* ShellScript */,
 				12864BFDAA8A7D67D4BCC165 /* [CP] Embed Pods Frameworks */,
 				817FD4BA290661B20020C8FB /* Embed Frameworks */,
+				813DD646296D471000DAAEC2 /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,7 +504,26 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Alamofire.xcframework/ios-arm64_x86_64-simulator/Alamofire.framework",
 			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		813DD646296D471000DAAEC2 /* Copy Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Carthage frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -729,6 +751,7 @@
 					"${PODS_ROOT}/AFNetworking",
 					"$(SRCROOT)/libs",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/ios-arm64_x86_64-simulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
@@ -781,6 +804,7 @@
 					"${PODS_ROOT}/AFNetworking",
 					"$(SRCROOT)/libs",
 					"$(PROJECT_DIR)/libs",
+					"$(PROJECT_DIR)/Carthage/Build/Alamofire.xcframework/ios-arm64_x86_64-simulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demo/PrefixHeader.pch";
