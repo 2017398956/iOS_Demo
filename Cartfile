@@ -1,1 +1,43 @@
-git "git@bitbucket.org:zealcomm/ivcs-ios-customer-framework.git" ~>0.6.0
+
+github "Alamofire/Alamofire"
+
+# 指定平台
+# carthage update --platform iOS
+
+# Building universal frameworks with common architectures is not possible. The device and simulator slices for "Alamofire" both build for: arm64 Rebuild with --use-xcframeworks to create an xcframework bundle instead.
+# 指定平台并构建不同的 abi，例如：x86_64
+# carthage update --platform iOS --use-xcframeworks
+
+# 添加framework到app
+
+# 1、创建Cartfile文件来管理需要添加的frameworks。
+# 2、在终端中运行carthage update命令。这条命令将会下载项目依赖的项目到 Carthage/Checkouts 目录，并且编译依赖项目。操作完成后会在 Carthage/Build/iOS 目录下生成 framework 文件。
+# 3、打开应用程序 target 的 “General” 设置标签，将生成的 framework 文件拖动到 “Linked Frameworks and Libraries” 区域。
+# 4、打开应用程序 target 的 “Build Phases” 设置标签，点击 “+” 按钮，选择 “New Run Script Phase”，在填写脚本区域写入 “/usr/local/bin/carthage copy-frameworks” ，在 “Input Files” 区域添加 framework 路径，例如：$(SRCROOT)/Carthage/Build/iOS/Box.framework 。该步骤保证 framework bitcode 以及 DSYM 文件正确拷贝。
+
+# 目前 Carthage 只支持 Github 或其他 git 项目，下面是关于 Cartfile 内容的例子：
+
+# Require version 2.3.1 or later
+# github "ReactiveCocoa/ReactiveCocoa" >= 2.3.1
+
+# Require version 1.x
+# github "Mantle/Mantle" ~> 1.0    # (1.0 or later, but less than 2.0)
+
+# Require exactly version 0.4.1
+# github "jspahrsummers/libextobjc" == 0.4.1
+
+# Use the latest version
+# github "jspahrsummers/xcconfigs"
+
+# Use the branch
+# github "jspahrsummers/xcconfigs" "branch"
+
+# Use a project from GitHub Enterprise
+# github "https://enterprise.local/ghe/desktop/git-error-translations"
+
+# Use a project from any arbitrary server, on the "development" branch
+# git "https://enterprise.local/desktop/git-error-translations2.git" "development"
+# git "git@bitbucket.org:zealcomm/irtc-sdk-pod.git" == 4.4.5
+
+# Use a local project
+# git "file:///directory/to/project" “branch"
