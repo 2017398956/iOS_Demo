@@ -7,8 +7,12 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+#import "STDPingServices.h"
 //#import <IvcsClientSdk/IvcsClientSdk.h>
 @interface ViewController ()
+
+@property(nonatomic, strong)STDPingServices *pingService;
+@property(nonatomic, strong)STDPingServices *pingService2;
 
 @end
 
@@ -57,7 +61,38 @@
     
 //    [self testAlertDialog];
     
-    [self testQMUIDialog];
+//    [self testQMUIDialog];
+    
+//    NSMutableString *pingResult = [[NSMutableString alloc] init];
+//    self.pingService = [STDPingServices startPingAddress:@"www.baidu.com" callbackHandler:^(STDPingItem *pingItem, NSArray *pingItems) {
+//        if(pingItem.status == STDPingStatusFinished){
+//            [pingResult appendString:[STDPingItem statisticsWithPingItems:pingItems]];
+//            MyLog(@"ping finish:\n%@", pingResult);
+//        }else{
+//            [pingResult appendString:pingItem.description];
+//            [pingResult appendString:@"\n"];
+//        }
+//    }];
+//    self.pingService.maximumPingTimes = 4;
+    
+    [self testPing];
+}
+
+-(void)testPing{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MyLog(@"test std ping service.");
+        NSMutableString *pingResult = [[NSMutableString alloc] init];
+        self.pingService2 = [STDPingServices startPingAddress:@"www.baidu.com" callbackHandler:^(STDPingItem *pingItem, NSArray *pingItems) {
+            if(pingItem.status == STDPingStatusFinished){
+                [pingResult appendString:[STDPingItem statisticsWithPingItems:pingItems]];
+                MyLog(@"ping finish:\n%@", pingResult);
+            }else{
+                [pingResult appendString:pingItem.description];
+                [pingResult appendString:@"\n"];
+            }
+        }];
+        self.pingService2.maximumPingTimes = 4;
+    });
 }
 
 - (void)testAlertDialog{

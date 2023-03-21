@@ -40,6 +40,14 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     UIView *view = imageView;
     MyLog(@"强转后的类型：%@",[view class]);
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *docDir = [NSString stringWithFormat:@"%@/%@.mp4",[documentPaths objectAtIndex:0],@"collected_short_video"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:docDir relativeToURL:nil];
+    MyLog(@"url.path:%@",url.path);
+    NSFileManager *fm = [NSFileManager defaultManager];
+    MyLog(@"already exist file:%d", [fm fileExistsAtPath:url.path]);
+    BOOL createResult = [fm createFileAtPath:url.path contents:nil attributes:nil];
+    MyLog(@"createFileResult:%@",@(createResult));
     return YES;
 }
 

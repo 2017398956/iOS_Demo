@@ -17,6 +17,10 @@
 		81251BC528F7F9A300944E82 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81251BC228F7F9A300944E82 /* SecondViewController.xib */; };
 		812BE2EB2919058B004495FC /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; };
 		812BE2EC2919058B004495FC /* AppBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 812BE2EA2919058B004495FC /* AppBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81893AD929C94A7100A3E447 /* STSimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 81893AD529C94A7100A3E447 /* STSimplePing.m */; };
+		81893ADA29C94A7100A3E447 /* STDPingServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893AD629C94A7100A3E447 /* STDPingServices.h */; };
+		81893ADB29C94A7100A3E447 /* STDPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 81893AD729C94A7100A3E447 /* STDPingServices.m */; };
+		81893ADC29C94A7100A3E447 /* STSimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893AD829C94A7100A3E447 /* STSimplePing.h */; };
 		818FC160292600D8009FBF66 /* dialog_test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818FC15F292600D8009FBF66 /* dialog_test.storyboard */; };
 		818FC16229260231009FBF66 /* dialog_custom_view_test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818FC16129260231009FBF66 /* dialog_custom_view_test.xib */; };
 		819C80E82918D835002DA707 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 819C80E72918D835002DA707 /* Cartfile */; };
@@ -85,6 +89,10 @@
 		81251BC228F7F9A300944E82 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		812BE2EA2919058B004495FC /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DD642296D46C400DAAEC2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Build/Alamofire.xcframework/ios-arm64_x86_64-simulator/Alamofire.framework"; sourceTree = "<group>"; };
+		81893AD529C94A7100A3E447 /* STSimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSimplePing.m; sourceTree = "<group>"; };
+		81893AD629C94A7100A3E447 /* STDPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPingServices.h; sourceTree = "<group>"; };
+		81893AD729C94A7100A3E447 /* STDPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPingServices.m; sourceTree = "<group>"; };
+		81893AD829C94A7100A3E447 /* STSimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSimplePing.h; sourceTree = "<group>"; };
 		818FC15F292600D8009FBF66 /* dialog_test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dialog_test.storyboard; sourceTree = "<group>"; };
 		818FC16129260231009FBF66 /* dialog_custom_view_test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dialog_custom_view_test.xib; sourceTree = "<group>"; };
 		819C80E72918D835002DA707 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 		81251BBB28F7F62100944E82 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				81893AD429C94A7100A3E447 /* ping */,
 				81251BB728F7F3D700944E82 /* BaseUINavigationController.h */,
 				81251BB828F7F3D700944E82 /* BaseUINavigationController.m */,
 				81251BBC28F7F6A900944E82 /* UIViewController+Helper.h */,
@@ -168,6 +177,17 @@
 				81A0C4A828F946AF00C469D6 /* UIColor+Helper.m */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		81893AD429C94A7100A3E447 /* ping */ = {
+			isa = PBXGroup;
+			children = (
+				81893AD529C94A7100A3E447 /* STSimplePing.m */,
+				81893AD629C94A7100A3E447 /* STDPingServices.h */,
+				81893AD729C94A7100A3E447 /* STDPingServices.m */,
+				81893AD829C94A7100A3E447 /* STSimplePing.h */,
+			);
+			path = ping;
 			sourceTree = "<group>";
 		};
 		818FC15E292600A2009FBF66 /* view */ = {
@@ -190,12 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				819C80E72918D835002DA707 /* Cartfile */,
+				F0AF142C3C0427B0C32B49B9 /* Frameworks */,
 				81C4AE6D28F561750031C7D2 /* iOS_Demo */,
 				81C4AE8928F561770031C7D2 /* iOS_DemoTests */,
 				81C4AE9328F561770031C7D2 /* iOS_DemoUITests */,
-				81C4AE6C28F561750031C7D2 /* Products */,
 				4CBAB45875EDF6EF1BE0B1F3 /* Pods */,
-				F0AF142C3C0427B0C32B49B9 /* Frameworks */,
+				81C4AE6C28F561750031C7D2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,9 +232,6 @@
 		81C4AE6D28F561750031C7D2 /* iOS_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				818FC15E292600A2009FBF66 /* view */,
-				81F031D629063E9900407DC8 /* PrefixHeader.pch */,
-				81A0C4A628F9463800C469D6 /* test */,
 				81C4AE6E28F561750031C7D2 /* AppDelegate.h */,
 				81C4AE6F28F561750031C7D2 /* AppDelegate.m */,
 				81C4AE7A28F561770031C7D2 /* Assets.xcassets */,
@@ -222,12 +239,15 @@
 				81C4AE7C28F561770031C7D2 /* LaunchScreen.storyboard */,
 				81C4AE8028F561770031C7D2 /* main.m */,
 				81C4AE7728F561750031C7D2 /* Main.storyboard */,
+				81F031D629063E9900407DC8 /* PrefixHeader.pch */,
 				81C4AE7128F561750031C7D2 /* SceneDelegate.h */,
 				81C4AE7228F561750031C7D2 /* SceneDelegate.m */,
 				81251BC028F7F9A300944E82 /* SecondViewController.h */,
 				81251BC128F7F9A300944E82 /* SecondViewController.m */,
 				81251BC228F7F9A300944E82 /* SecondViewController.xib */,
+				81A0C4A628F9463800C469D6 /* test */,
 				81251BBB28F7F62100944E82 /* utils */,
+				818FC15E292600A2009FBF66 /* view */,
 				81C4AE7428F561750031C7D2 /* ViewController.h */,
 				81C4AE7528F561750031C7D2 /* ViewController.m */,
 			);
@@ -272,6 +292,8 @@
 			files = (
 				81251BB928F7F3D700944E82 /* BaseUINavigationController.h in Headers */,
 				81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */,
+				81893ADA29C94A7100A3E447 /* STDPingServices.h in Headers */,
+				81893ADC29C94A7100A3E447 /* STSimplePing.h in Headers */,
 				81251BBE28F7F6A900944E82 /* UIViewController+Helper.h in Headers */,
 				81A0C4A528F945E200C469D6 /* NSString+Helper.h in Headers */,
 				81F031D729063E9900407DC8 /* PrefixHeader.pch in Headers */,
@@ -564,9 +586,11 @@
 				81C4AE7628F561750031C7D2 /* ViewController.m in Sources */,
 				81C4AE7028F561750031C7D2 /* AppDelegate.m in Sources */,
 				81251BBF28F7F6A900944E82 /* UIViewController+Helper.m in Sources */,
+				81893ADB29C94A7100A3E447 /* STDPingServices.m in Sources */,
 				81A0C4AA28F946AF00C469D6 /* UIColor+Helper.m in Sources */,
 				81251BC428F7F9A300944E82 /* SecondViewController.m in Sources */,
 				81251BBA28F7F3D700944E82 /* BaseUINavigationController.m in Sources */,
+				81893AD929C94A7100A3E447 /* STSimplePing.m in Sources */,
 				81C4AE8128F561770031C7D2 /* main.m in Sources */,
 				81C4AE7328F561750031C7D2 /* SceneDelegate.m in Sources */,
 			);

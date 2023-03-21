@@ -62,8 +62,10 @@ static id _instance;\
     [dateFormatter stringFromDate:[NSDate date]];\
 })
 #define MyLog(fmt, ...)   NSLog(@"%@", [NSString stringWithFormat:(@"------------------------%@------------------------\r\n\t[文件名称:%s]\r\n\t[函数名:%s]\r\n\t[行号:%d]\r\n\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__]);
+#define NSLogger(...) MyLog(...)
 #else
 #define MyLog(...)
+#define NSLogger(...)
 #endif
 #endif
 // Include any system framework and library headers here that should be included in all compilation units.
