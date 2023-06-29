@@ -21,6 +21,8 @@
 		81893ADA29C94A7100A3E447 /* STDPingServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893AD629C94A7100A3E447 /* STDPingServices.h */; };
 		81893ADB29C94A7100A3E447 /* STDPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 81893AD729C94A7100A3E447 /* STDPingServices.m */; };
 		81893ADC29C94A7100A3E447 /* STSimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893AD829C94A7100A3E447 /* STSimplePing.h */; };
+		81893ADF29CA91E100A3E447 /* SingletonTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 81893ADD29CA91E100A3E447 /* SingletonTest.h */; };
+		81893AE029CA91E100A3E447 /* SingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 81893ADE29CA91E100A3E447 /* SingletonTest.m */; };
 		818FC160292600D8009FBF66 /* dialog_test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818FC15F292600D8009FBF66 /* dialog_test.storyboard */; };
 		818FC16229260231009FBF66 /* dialog_custom_view_test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818FC16129260231009FBF66 /* dialog_custom_view_test.xib */; };
 		819C80E82918D835002DA707 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 819C80E72918D835002DA707 /* Cartfile */; };
@@ -93,6 +95,8 @@
 		81893AD629C94A7100A3E447 /* STDPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPingServices.h; sourceTree = "<group>"; };
 		81893AD729C94A7100A3E447 /* STDPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPingServices.m; sourceTree = "<group>"; };
 		81893AD829C94A7100A3E447 /* STSimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSimplePing.h; sourceTree = "<group>"; };
+		81893ADD29CA91E100A3E447 /* SingletonTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonTest.h; sourceTree = "<group>"; };
+		81893ADE29CA91E100A3E447 /* SingletonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonTest.m; sourceTree = "<group>"; };
 		818FC15F292600D8009FBF66 /* dialog_test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = dialog_test.storyboard; sourceTree = "<group>"; };
 		818FC16129260231009FBF66 /* dialog_custom_view_test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dialog_custom_view_test.xib; sourceTree = "<group>"; };
 		819C80E72918D835002DA707 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		81A0C4A628F9463800C469D6 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				81893ADD29CA91E100A3E447 /* SingletonTest.h */,
+				81893ADE29CA91E100A3E447 /* SingletonTest.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81251BB928F7F3D700944E82 /* BaseUINavigationController.h in Headers */,
+				81893ADF29CA91E100A3E447 /* SingletonTest.h in Headers */,
 				81A0C4A928F946AF00C469D6 /* UIColor+Helper.h in Headers */,
 				81893ADA29C94A7100A3E447 /* STDPingServices.h in Headers */,
 				81893ADC29C94A7100A3E447 /* STSimplePing.h in Headers */,
@@ -589,6 +596,7 @@
 				81893ADB29C94A7100A3E447 /* STDPingServices.m in Sources */,
 				81A0C4AA28F946AF00C469D6 /* UIColor+Helper.m in Sources */,
 				81251BC428F7F9A300944E82 /* SecondViewController.m in Sources */,
+				81893AE029CA91E100A3E447 /* SingletonTest.m in Sources */,
 				81251BBA28F7F3D700944E82 /* BaseUINavigationController.m in Sources */,
 				81893AD929C94A7100A3E447 /* STSimplePing.m in Sources */,
 				81C4AE8128F561770031C7D2 /* main.m in Sources */,

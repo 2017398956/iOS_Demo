@@ -6,12 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#define declareSingleInstance(name) +(instancetype)shared##name
+#define declareSingleInstance2(name) +(instancetype)shared##name
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SigletonBase : NSObject
 
-declareSingleInstance();
+declareSingleInstance2();
 
 -(void)sayHello;
 

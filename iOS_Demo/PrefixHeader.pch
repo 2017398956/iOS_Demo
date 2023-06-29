@@ -8,71 +8,88 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define US_KEY_TOKEN @"nfl_token" // 用于存储会话 token
+#define Device_Width  [[UIScreen mainScreen] bounds].size.width     //获取屏幕宽高
+#define Device_Height [[UIScreen mainScreen] bounds].size.height    //获取屏幕高度
 
 // 单例模式宏定义
-#define declareSingleInstance(name) +(instancetype)shared##name
+#define declareSingleInstance(name) +(instancetype)makeNew;\
++(instancetype)shared##name;
+
 #define relizeSingleInstanceWithBlock(name , block) \
 static id _instance;\
+static bool _makeNewInstance;\
 + (instancetype)allocWithZone:(struct _NSZone *)zone{\
-    static dispatch_once_t onceToken;\
-    dispatch_once(&onceToken\
-                  , ^{\
+    if(_makeNewInstance){\
         _instance = [super allocWithZone:zone];\
-    });\
+    }else{\
+        static dispatch_once_t onceToken;\
+        dispatch_once(&onceToken\
+                      , ^{\
+            _instance = [super allocWithZone:zone];\
+        });\
+    }\
     return _instance;\
 }\
-\
 - (instancetype)init{\
-    static dispatch_once_t onceToken;\
-    dispatch_once(&onceToken\
-                  , ^{\
+    if(_makeNewInstance){\
         _instance = [super init];\
-        block();\
-    });\
+    }else{\
+        static dispatch_once_t onceToken;\
+        dispatch_once(&onceToken\
+                      , ^{\
+            _instance = [super init];\
+            block();\
+        });\
+    }\
     return _instance;\
+}\
++ (instancetype)makeNew{\
+    _makeNewInstance = TRUE;\
+    return [[self alloc] init];\
 }\
 + (instancetype)shared##name{\
-    static dispatch_once_t onceToken;\
-    dispatch_once(&onceToken, ^{\
+    if(_makeNewInstance){\
+    }else{\
+        static dispatch_once_t onceToken;\
+        dispatch_once(&onceToken, ^{\
         _instance = [[self alloc] init];\
-    });\
+        });\
+    }\
     return _instance;\
 }
+
+
 #define relizeSingleInstance(name) relizeSingleInstanceWithBlock(name, ^{})
+
 
 // 解决 log 打印不全的问题
 #define CLog(format, ...)  NSLog(format, ## __VA_ARGS__)
 //#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 #ifdef DEBUG
-#define __MY_TIME__ ({\
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];[dateFormatter setDateStyle:NSDateFormatterMediumStyle];[dateFormatter setTimeStyle:NSDateFormatterShortStyle];[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
-    [dateFormatter stringFromDate:[NSDate date]];\
-})
-#define MyLog(fmt,...) printf("%s\n", [[NSString stringWithFormat:(@"------------------------%@------------------------\r\t[文件名称:%s]\r\t[函数名:%s]\r\t[行号:%d]\r\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__] UTF8String]);
+    #define __MY_TIME__ ({\
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];[dateFormatter setDateStyle:NSDateFormatterMediumStyle];[dateFormatter setTimeStyle:NSDateFormatterShortStyle];[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
+        [dateFormatter stringFromDate:[NSDate date]];\
+    })
+    #define MyLog(fmt,...) printf("%s\n", [[NSString stringWithFormat:(@"------------------------%@------------------------\r\t[文件名称:%s]\r\t[函数名:%s]\r\t[行号:%d]\r\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__] UTF8String]);
+    #define NSLogger(...) MyLog(...)
 #else
-#include <TargetConditionals.h>
-#if TARGET_IPHONE_SIMULATOR
-#define __MY_TIME__ ({\
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
-    [dateFormatter stringFromDate:[NSDate date]];\
-})
-#define MyLog(fmt, ...)   NSLog(@"%@", [NSString stringWithFormat:(@"------------------------%@------------------------\r\n\t[文件名称:%s]\r\n\t[函数名:%s]\r\n\t[行号:%d]\r\n\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__]);
-#define NSLogger(...) MyLog(...)
-#else
-#define MyLog(...)
-#define NSLogger(...)
+    #include <TargetConditionals.h>
+    #if TARGET_IPHONE_SIMULATOR
+        #define __MY_TIME__ ({\
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
+            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
+            [dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];\
+            [dateFormatter stringFromDate:[NSDate date]];\
+        })
+        #define MyLog(fmt, ...)   NSLog(@"%@", [NSString stringWithFormat:(@"------------------------%@------------------------\r\n\t[文件名称:%s]\r\n\t[函数名:%s]\r\n\t[行号:%d]\r\n\t"fmt),__MY_TIME__,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__]);
+        #define NSLogger(...) MyLog(...)
+    #else
+        #define MyLog(...)
+        #define NSLogger(...)
+    #endif
 #endif
-#endif
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-#define Device_Width  [[UIScreen mainScreen] bounds].size.width     //获取屏幕宽高
-#define Device_Height [[UIScreen mainScreen] bounds].size.height    //获取屏幕高度
 
 #import <QMUIKit/QMUIKit.h>
 

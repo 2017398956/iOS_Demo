@@ -729,7 +729,6 @@ static void STSocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDat
 static void STHostResolveCallback(CFHostRef theHost, CFHostInfoType typeInfo, const CFStreamError *error, void *info) {
     // This C routine is called by CFHost when the host resolution is complete. 
     // It just redirects the call to the appropriate Objective-C method.
-    MyLog(@"STHostResolveCallback:%@, %d, %d, %@, currentThread:%@", theHost, typeInfo , (int)error->error, info,[NSThread currentThread].name);
     STSimplePing *    obj;
 
     obj = (__bridge STSimplePing *) info;

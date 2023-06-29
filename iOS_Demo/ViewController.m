@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "SecondViewController.h"
 #import "STDPingServices.h"
+#import "SingletonTest.h"
 //#import <IvcsClientSdk/IvcsClientSdk.h>
 @interface ViewController ()
 
@@ -74,8 +75,14 @@
 //        }
 //    }];
 //    self.pingService.maximumPingTimes = 4;
-    
-    [self testPing];
+    SingletonTest *single1 = [SingletonTest shared];
+    SingletonTest *single2 = [SingletonTest makeNew];
+    SingletonTest *single3 = [SingletonTest shared];
+    SingletonTest *single4 = [SingletonTest makeNew];
+    MyLog(@"%@", single1);
+    MyLog(@"%@", single2);
+    MyLog(@"%@", single3);
+    MyLog(@"%@", single4);
 }
 
 -(void)testPing{

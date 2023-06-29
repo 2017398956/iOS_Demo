@@ -7,7 +7,7 @@
 
 #import "SigletonBase.h"
 
-#define relizeSingleInstanceWithBlock(name , block) \
+#define relizeSingleInstanceWithBlock2(name , block) \
 static id _instance;\
 + (instancetype)allocWithZone:(struct _NSZone *)zone{\
     static dispatch_once_t onceToken;\
@@ -34,11 +34,11 @@ static id _instance;\
     });\
     return _instance;\
 }
-#define relizeSingleInstance(name) relizeSingleInstanceWithBlock(name, ^{})
+#define relizeSingleInstance2(name) relizeSingleInstanceWithBlock2(name, ^{})
 
 @implementation SigletonBase
 
-relizeSingleInstance();
+relizeSingleInstance2();
 
 - (void)sayHello{
     NSLog(@"Hello !");
