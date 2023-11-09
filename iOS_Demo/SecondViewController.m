@@ -24,6 +24,7 @@
     TestThree *testThree = [TestThree shared];
     [testThree sayHello];
     [[TestTwo shared] testName];
+    [[TestMyMacro sharedSingle] testSuccess];
     // Do any additional setup after loading the view from its nib.
 //    NSString *test = @"test";
 //    [test testNSString02];

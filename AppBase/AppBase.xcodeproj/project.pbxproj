@@ -53,6 +53,9 @@
 		817FD4C129066A410020C8FB /* SigletonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FD4BF29066A410020C8FB /* SigletonBase.m */; };
 		817FD4C429066B440020C8FB /* TestThree.h in Headers */ = {isa = PBXBuildFile; fileRef = 817FD4C229066B440020C8FB /* TestThree.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		817FD4C529066B440020C8FB /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 817FD4C329066B440020C8FB /* TestThree.m */; };
+		8187E9422AFC7A74006CFBF4 /* MyMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 8187E9412AFC7A74006CFBF4 /* MyMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8187E9472AFC7C1F006CFBF4 /* TestMyMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 8187E9452AFC7C1F006CFBF4 /* TestMyMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8187E9482AFC7C1F006CFBF4 /* TestMyMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8187E9462AFC7C1F006CFBF4 /* TestMyMacro.m */; };
 		81B79ABE28FE85A9004B13A0 /* AppBase.docc in Sources */ = {isa = PBXBuildFile; fileRef = 81B79ABD28FE85A9004B13A0 /* AppBase.docc */; };
 		81B79AC428FE85A9004B13A0 /* AppBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B79AB928FE85A9004B13A0 /* AppBase.framework */; };
 		81B79AC928FE85A9004B13A0 /* AppBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B79AC828FE85A9004B13A0 /* AppBaseTests.m */; };
@@ -99,6 +102,9 @@
 		817FD4BF29066A410020C8FB /* SigletonBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SigletonBase.m; sourceTree = "<group>"; };
 		817FD4C229066B440020C8FB /* TestThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
 		817FD4C329066B440020C8FB /* TestThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
+		8187E9412AFC7A74006CFBF4 /* MyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMacro.h; sourceTree = "<group>"; };
+		8187E9452AFC7C1F006CFBF4 /* TestMyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMyMacro.h; sourceTree = "<group>"; };
+		8187E9462AFC7C1F006CFBF4 /* TestMyMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMyMacro.m; sourceTree = "<group>"; };
 		81B79AB928FE85A9004B13A0 /* AppBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B79ABC28FE85A9004B13A0 /* AppBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppBase.h; sourceTree = "<group>"; };
 		81B79ABD28FE85A9004B13A0 /* AppBase.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AppBase.docc; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 				81F031D329063D7F00407DC8 /* TestTwo.m */,
 				817523C42912436A00CDF49A /* GenericsTest.h */,
 				817523C52912436A00CDF49A /* GenericsTest.m */,
+				8187E9452AFC7C1F006CFBF4 /* TestMyMacro.h */,
+				8187E9462AFC7C1F006CFBF4 /* TestMyMacro.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				817523C229123CA200CDF49A /* DrawView+Ext.h */,
 				8115BBCD292791A0000C0053 /* KeyboardUtil.h */,
 				8115BBCE292791A0000C0053 /* KeyboardUtil.m */,
+				8187E9412AFC7A74006CFBF4 /* MyMacro.h */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -253,7 +262,9 @@
 				817523C329123CA200CDF49A /* DrawView+Ext.h in Headers */,
 				817523CF29124D0F00CDF49A /* NSObject+Helper.h in Headers */,
 				8115BBCF292791A0000C0053 /* KeyboardUtil.h in Headers */,
+				8187E9472AFC7C1F006CFBF4 /* TestMyMacro.h in Headers */,
 				817523C62912436A00CDF49A /* GenericsTest.h in Headers */,
+				8187E9422AFC7A74006CFBF4 /* MyMacro.h in Headers */,
 				81DD5AB829028353004A1736 /* PrefixHeader.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +446,7 @@
 				817FD4C129066A410020C8FB /* SigletonBase.m in Sources */,
 				817523CC29124D0F00CDF49A /* NSDate+Helper.m in Sources */,
 				817523B9291214B700CDF49A /* DrawView.m in Sources */,
+				8187E9482AFC7C1F006CFBF4 /* TestMyMacro.m in Sources */,
 				81B79ABE28FE85A9004B13A0 /* AppBase.docc in Sources */,
 				81562B682900E9660025CEDB /* Test.m in Sources */,
 				817523CD29124D0F00CDF49A /* NSObject+Helper.m in Sources */,
