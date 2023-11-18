@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		8185DB4A2B0858D500F5990B /* appledocTest */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8185DB4D2B0858D500F5990B /* Build configuration list for PBXAggregateTarget "appledocTest" */;
+			buildPhases = (
+				8185DB4E2B0858DB00F5990B /* Run Script */,
+			);
+			dependencies = (
+			);
+			name = appledocTest;
+			productName = appledocTest;
+		};
+		8185DB4F2B08597400F5990B /* fastlaneDemo */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8185DB502B08597400F5990B /* Build configuration list for PBXAggregateTarget "fastlaneDemo" */;
+			buildPhases = (
+				8185DB532B08597800F5990B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = fastlaneDemo;
+			productName = fastlaneDemo;
+		};
 		81DD5A9229026289004A1736 /* AppBaseFrameworkMaker */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 81DD5A9529026289004A1736 /* Build configuration list for PBXAggregateTarget "AppBaseFrameworkMaker" */;
@@ -318,6 +340,12 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					8185DB4A2B0858D500F5990B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					8185DB4F2B08597400F5990B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					81B79AB828FE85A9004B13A0 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -349,6 +377,8 @@
 				81B79AC228FE85A9004B13A0 /* AppBaseTests */,
 				81DD5A9229026289004A1736 /* AppBaseFrameworkMaker */,
 				81DD5AA62902678F004A1736 /* AppBaseAppleDoc */,
+				8185DB4A2B0858D500F5990B /* appledocTest */,
+				8185DB4F2B08597400F5990B /* fastlaneDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -393,6 +423,41 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8185DB4E2B0858DB00F5990B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncompany=\"MyDemo\";\ncompanyID=\"com.nfl.mydemo\";\ncompanyURL=\"https://www.xxx.cn/#/\";\ntarget=\"iphoneos\";\nversion=\"1.4.0\";\noutputPath=\"doc/${version}\";\necho \"当前路径：\";\npwd;\necho \"PROJECT_DIR：\";\necho \"${PROJECT_DIR}\";\nif [ ! -d $outputPath ];then\nmkdir ${outputPath}\nfi\n# Release=\"--no-warn-undocumented-object --no-warn-undocumented-member\";# 导出模式，如果有不符合备注规范的代码，也会忽略，直接生成文档。--no-warn-undocumented-object 表示没有注释的文件不提示警告；--no-warn-undocumented-member 表示没有注释的属性和方法不提示警告\n# 生成 docset\n# --docset-atom-filename \"${company}.atom\" --docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" --docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" --docset-fallback-url \"${companyURL}/${company}\" --publish-docset --logformat xcode --docset-platform-family \"${target}\"\n# 不要生成 docset\n# --no-create-docset \n# End constants\n/usr/local/bin/appledoc \\\n--output \"${outputPath}\" \\\n--project-name \"${PROJECT_NAME}-version:${version}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--no-create-docset \\\n--no-warn-undocumented-object \\\n--no-warn-undocumented-member \\\n-i Pods -i *.m \\\n-i xxx.h \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"\n\n";
+		};
+		8185DB532B08597800F5990B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncompany=\"MyDemo\";\ncompanyID=\"com.nfl.mydemo\";\ncompanyURL=\"https://www.xxx.cn/#/\";\ntarget=\"iphoneos\";\nversion=\"1.4.0\";\noutputPath=\"doc/${version}\";\nsecondPath=\"${PROJECT_DIR}/../SecondPath\";\necho \"当前路径：\";\npwd;\necho \"PROJECT_DIR：\";\necho \"${PROJECT_DIR}\";\nif [ ! -d $outputPath ];then\nmkdir ${outputPath}\nfi\nfastlane run appledoc project_name:\"${PROJECT_NAME}-version:${version}\" project_company:\"${company}\" company_id:\"${companyID}\" options:\"--keep-intermediate-files --no-repeat-first-par --no-warn-invalid-crossref --no-create-docset --no-warn-undocumented-object --no-warn-undocumented-member --keep-undocumented-objects --keep-undocumented-members --exit-threshold 2\" ignore:\"Pods\",\"*.m\",\"xxx.h\", input:\"${secondPath}\",\"${PROJECT_DIR}\" output:\"${outputPath}\"\n";
 		};
 		81DD5A962902628F004A1736 /* FrameworkMaker */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -472,6 +537,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8185DB4B2B0858D500F5990B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 778BAP6N4Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8185DB4C2B0858D500F5990B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 778BAP6N4Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8185DB512B08597400F5990B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 778BAP6N4Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8185DB522B08597400F5990B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 778BAP6N4Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		81B79ACB28FE85A9004B13A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -737,6 +838,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8185DB4D2B0858D500F5990B /* Build configuration list for PBXAggregateTarget "appledocTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8185DB4B2B0858D500F5990B /* Debug */,
+				8185DB4C2B0858D500F5990B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8185DB502B08597400F5990B /* Build configuration list for PBXAggregateTarget "fastlaneDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8185DB512B08597400F5990B /* Debug */,
+				8185DB522B08597400F5990B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81B79AB328FE85A9004B13A0 /* Build configuration list for PBXProject "AppBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
